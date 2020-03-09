@@ -1,0 +1,252 @@
+<section id="section-blog">
+  <div class="container">
+    <div class="text-center">
+      {% assign blog1 = blogs[section.settings.blog1] %}
+      {% assign blog2 = blogs[section.settings.blog2] %}
+      {% assign blog3 = blogs[section.settings.blog3] %}
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">{{blog1.title}}</a></li>
+        <li><a data-toggle="tab" href="#menu1">RECIPE VIDEOS</a></li>
+        <li><a data-toggle="tab" href="#menu2" class="all-review-content">{{blog3.title}}</a></li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <h2 class="clr-b m-b">The Pantry <span id="br-line"></span></h2>
+      <div id="home" class="tab-pane fade in active">
+        <div class="row">
+          {% assign featured = section.settings.featured_post1 %}{% assign featured_post = articles[featured] %}
+          <div class="col-md-6">
+            <div class="bx-img" style="background: url({{ featured_post.image | img_url: '700x' }});">
+              <div class="box-txt text-center">
+                <div class="box-wrpr">
+                <h3>{{featured_post.title}}</h3>
+                <p class="txt-detail">{% if featured_post.excerpt == blank %}{{ featured_post.content | strip_html | truncatewords: 15 }}{% else %}{{ featured_post.excerpt | truncatewords: 15 }}{% endif %}</p>
+                <p><a href="{{featured_post.url}}" class="readmore">READ MORE <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" id="pantry-wrapper">
+            <h2 class="blog-heading">{{section.settings.featured_title1}}</h2>
+            <a href="{{blog1.url}}" class="readmore">Read the latest <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            
+            <div class="desktop">
+              {% for article in blog1.articles limit:3 %}
+              <div class="media">
+                <div class="media-left">
+                  <a href="{{article.url}}">
+                    <img src="{{ article.image | img_url: '250x' }}" class="lazyload media-object" alt="{{ article.image.alt | escape }}">
+                  </a>
+                </div>
+                <div class="media-body text-center0">
+                  <h4 class="media-heading m-h"><a href="{{article.url}}">{{article.title}}</a></h4>
+                  <p>{% if article.excerpt == blank %}{{ article.content | strip_html | truncatewords: 25 }}{% else %}{{ article.excerpt | truncatewords: 25 }}{% endif %}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            
+            <div class="mobile">
+              <div class="owl-carousel owl-theme" id="blog-carousel">
+                {% for article in blog1.articles limit:3 %}
+                <div class="item">
+                  <div class="media-left">
+                    <a href="{{article.url}}">
+                      <img src="{{ article.image | img_url: '450x' }}" class="lazyload media-object" alt="{{ article.image.alt | escape }}">
+                    </a>
+                  </div>
+                  <div class="media-body text-center0">
+                    <h4 class="media-heading m-h"><a href="{{article.url}}">{{article.title}}</a></h4>
+                    <p>{% if article.excerpt == blank %}{{ article.content | strip_html | truncatewords: 25 }}{% else %}{{ article.excerpt | truncatewords: 25 }}{% endif %}</p>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <div id="menu1" class="tab-pane fade">
+        <div class="row">
+          {% for block in section.blocks %}
+          	<div class="col-xs-12 col-sm-4 col-md-3">
+              <a data-fancybox="gallery-recipe-videos" href="{{block.settings.url}}" data-width="640" data-height="360">
+                <div class="video-item">
+                  <div class="video-player" style="pointer-events: none;">
+                    <iframe class="lazyload" data-src="{{block.settings.url}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
+                  </div>
+                  <div class="title">{{block.settings.title}}</div>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+
+          
+        </div>
+      </div>
+      
+      
+      <div id="menu2" class="tab-pane fade">
+        {% comment %} <div class="row">
+          {% assign featured = section.settings.featured_post3 %}{% assign featured_post = articles[featured] %}
+          <div class="col-md-6">
+            <div class="bx-img" style="background: url({{ featured_post.image | img_url: '700x' }});">
+              <div class="box-txt text-center">
+                <div class="box-wrpr">
+                <h3>{{featured_post.title}}</h3>
+                <p class="txt-detail">{% if featured_post.excerpt == blank %}{{ featured_post.content | strip_html | truncatewords: 15 }}{% else %}{{ featured_post.excerpt | truncatewords: 15 }}{% endif %}</p>
+                <p><a href="{{featured_post.url}}" class="readmore">READ MORE <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="blog-heading">{{section.settings.featured_title3}}</h2>
+            <a href="{{blog3.url}}" class="readmore">Read the latest <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+            {% for article in blog3.articles limit:3  %}
+            <div class="media">
+              <div class="media-left">
+                <img src="{{ article.image | img_url: '150x' }}" class="lazyload media-object" alt="{{ article.image.alt | escape }}">
+              </div>
+              <div class="media-body text-center0">
+                <h4 class="media-heading m-h"><a href="{{article.url}}">{{article.title}}</a></h4>
+                <p>{% if article.excerpt == blank %}{{ article.content | strip_html | truncatewords: 25 }}{% else %}{{ article.excerpt | truncatewords: 25 }}{% endif %}</p>
+              </div>
+            </div>
+            {% endfor %}
+            {% assign product = all_products[section.settings.review_product ]%}
+            {% comment %} <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div> {% endcomment %}
+          </div>
+        </div> {% endcomment %}
+        {% comment %} Install Stamped.io main review widget {% endcomment %}
+        	
+        	{%- assign product = all_products[section.settings.review_product] -%}
+        
+        	{% include 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false %}
+ 			
+        	{% comment %}
+            <div id="stamped-main-widget" 
+              data-widget-style="standard"
+              data-product-id="{{ product.id }}" 
+              data-name="{{ product.title | escape }}" 
+              data-url="{{ shop.url }}{{ product.url }}" 
+              data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+              data-description="{{ product.description | escape }}" 
+              data-product-sku="{{product.handle}}"> 
+              {{ product.metafields.stamped.reviews }}
+            </div>
+        	{% endcomment %}
+        
+            <!-- End Stamped.io main review widget -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).delegate("a", "click", function() {
+    var href = $(this).attr("href");
+    if ( href == "#menu1" ){
+      initRecipeVideos();
+    }
+  });
+  
+  function initRecipeVideos(){
+    var vidDefer = document.getElementsByTagName('iframe');
+	for (var i=0; i<vidDefer.length; i++) {
+		if(vidDefer[i].getAttribute('recipe-data-src')) {
+			vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('recipe-data-src'));
+		} 
+    } 
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Blog",
+    "settings": [
+		{
+          "type":"product",
+          "id":"review_product",
+          "label":"Review Product"
+        },
+        {
+          "type": "article",
+          "id": "featured_post1",
+          "label": "Featured post 1"
+        },
+        {
+          "type": "text",
+          "id": "featured_title1",
+          "label": "Heading 1",
+          "default": "Title 1"
+        },
+        {
+          "type": "blog",
+          "id": "blog1",
+          "label": "Blog 1"
+        },
+        {
+          "type": "article",
+          "id": "featured_post2",
+          "label": "Featured post 2"
+        },
+        {
+          "type": "text",
+          "id": "featured_title2",
+          "label": "Heading 2",
+          "default": "Title 2"
+        },
+        {
+          "type": "blog",
+          "id": "blog2",
+          "label": "Blog 2"
+        },
+        {
+          "type": "article",
+          "id": "featured_post3",
+          "label": "Featured post 3"
+        },
+        {
+          "type": "text",
+          "id": "featured_title3",
+          "label": "Heading 3",
+          "default": "Title 3"
+        },
+        {
+          "type": "blog",
+          "id": "blog3",
+          "label": "Blog 3"
+        }
+	],
+	"blocks": [
+      {
+          "type": "image",
+          "name": "gallery",
+          "settings": [
+              {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              },
+              {
+                  "type": "url",
+                  "id": "url",
+                  "label": "Video URL",
+                  "info": "Optional"
+              }
+          ]
+      }
+  	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

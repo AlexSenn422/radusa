@@ -1,0 +1,331 @@
+<section id="section-features">
+	<div class="container">
+      	<div class="text-center">
+          <h1 class="text-center title">
+            {{section.settings.title}}
+          </h1>
+      	</div>
+      
+		<div class="f-bg desktop">
+			<div class="row p-t">
+				<div class="col-md-3 arroww">
+					<span id="im-1">
+                      <img src="{{'group-92.png' | asset_url}}" class="img-responsive group-lines lazyload" alt="">
+                  	</span>
+					<span class="im-inline">
+                      <img src="{{ section.settings.icon1 | img_url: '40x' }}" class="img-responsive center-block" alt="">
+                  	</span>
+					<a data-href="{{section.settings.video_url1.id}}" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="right auto" data-original-title="" title=""><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; {{ section.settings.video1 }}</a>
+					<h5>{{ section.settings.h1 }}</h5>
+					<p>{{ section.settings.p1 }}</p>
+				</div>
+				<div class="col-md-offset-6 col-md-3 arroww-1">
+					<span id="im-2">
+                      <img src="{{'group-96.png' | asset_url}}" class="img-responsive group-lines" alt="">
+                  	</span>
+                  
+					<a data-href="{{section.settings.video_url2.id}}" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="left auto" data-original-title="" title=""><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; {{ section.settings.video2 }}</a>
+					<span class="im-inline">
+						<img src="{{ section.settings.icon2 | img_url: '40x' }}" class="img-responsive center-block" alt="">
+					</span>
+					<h5>{{ section.settings.h2 }}</h5>
+					<p>{{ section.settings.p2 }}</p>
+				</div>
+			</div>
+			
+			<div class="row pd-t">
+				<div class="col-md-3 arroww">
+					<span id="im-3"><img src="{{'group-93.png' | asset_url}}" class="img-responsive group-lines" alt=""></span>
+					<span class="im-inline"><img src="{{ section.settings.icon3 | img_url: '40x' }}" class="img-responsive center-block" alt=""></span>
+					<a data-href="{{section.settings.video_url3.id}}" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="right auto" data-original-title="" title=""><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; {{ section.settings.video3 }}</a>
+					<h5>{{ section.settings.h3 }}</h5>
+					<p>{{ section.settings.p3 }}</p>
+				</div>
+				<div class="col-md-offset-6 col-md-3 arroww-1" style="padding-left:0px;">
+					<span id="im-4"><img src="{{'group-95.png' | asset_url}}" class="img-responsive group-lines" alt=""></span>
+					<a data-href="{{section.settings.video_url4.id}}" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="left auto" data-original-title="" title=""><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; {{ section.settings.video4 }}</a>
+					<span class="im-inline">
+						<img src="{{ section.settings.icon4 | img_url: '40x' }}" class="img-responsive center-block" alt="">
+					</span>
+					<h5>{{ section.settings.h4 }}</h5>
+					<p>
+                      <a data-href="340515901" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="left auto" data-original-title="" title="">
+                        <span style="color:#8A2433; font-weight: 600">WATCH ECLIPSE® TESTING</span>
+                      </a>
+					  <br>
+                      {{ section.settings.p4 }}
+                  	</p>
+				</div>
+			</div>
+          
+          	<img class="pan-image" src="https://cdn.shopify.com/s/files/1/0018/2727/4827/t/17/assets/features_bg.png?64319">
+          
+          	<!--
+          	<div class="row">
+              <div class="col-md-12 arrow5">
+                <span id="im-5"><img src="{{'feature_line5.png' | asset_url}}" class="img-responsive group-lines" alt=""></span>
+                <a data-href="{{section.settings.video_url5.id}}" class="clr-w video-tooltip theme-colored watch-video-updated" data-toggle="popover_vimeo" data-trigger="hover" data-placement="left auto" data-original-title="" title=""><i class="fa fa-volume-up" aria-hidden="true"></i>&nbsp; {{ section.settings.video4 }}</a>
+                <span class="im-inline">
+                  <img src="{{ section.settings.icon5 | img_url: '40x' }}" class="img-responsive center-block" alt="">
+                </span>
+                <h5>{{ section.settings.h5 }}</h5>
+                <p>
+                  {{ section.settings.p5 }}
+                </p>
+              </div>
+          	</div>
+			-->
+          
+		</div>
+	</div>
+  
+  	<div class="mobile">
+		<div class="text-center owl-carousel owl-theme" id="features-slider">          
+          <div class="item text-center">  	
+            <iframe class="feature-video lazyload" data-src="https://player.vimeo.com/video/{{section.settings.video_url1.id}}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div>
+              <span class="im-inline"><img src="{{ section.settings.icon1 | img_url: '300x' }}" class="img-responsive center-block" alt=""></span>
+              <h5>{{ section.settings.h1 }}</h5>
+              <p>{{ section.settings.p1 }}</p>
+            </div>
+          </div>
+          <div class="item text-center">
+            <iframe class="feature-video lazyload" data-src="https://player.vimeo.com/video/{{section.settings.video_url2.id}}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="im-inline">
+              <img src="{{ section.settings.icon2 | img_url: '300x' }}" class="img-responsive center-block" alt="">
+            </span>
+            <h5>{{ section.settings.h2 }}</h5>
+            <p>{{ section.settings.p2 }}</p>
+          </div>
+          <div class="item text-center">
+            <iframe class="feature-video lazyload" data-src="https://player.vimeo.com/video/{{section.settings.video_url3.id}}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="im-inline"><img src="{{ section.settings.icon3 | img_url: '300x' }}" class="img-responsive center-block" alt=""></span>
+            <h5>{{ section.settings.h3 }}</h5>
+            <p>{{ section.settings.p3 }}</p>
+          </div>
+          <div class="item text-center">
+            <iframe class="feature-video lazyload" data-src="https://player.vimeo.com/video/{{section.settings.video_url4.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="im-inline">
+              <img src="{{ section.settings.icon4 | img_url: '300x' }}" class="img-responsive center-block" alt="">
+            </span>
+            <h5>{{ section.settings.h4 }}</h5>
+            <p>{{ section.settings.p4 }}</p>
+          </div>
+          
+          <!--
+          <div class="item text-center">
+            <iframe class="feature-video lazyload" data-src="https://player.vimeo.com/video/{{section.settings.video_url5.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="im-inline">
+              <img src="{{ section.settings.icon5 | img_url: '300x' }}" class="img-responsive center-block " alt="">
+            </span>
+            <h5>{{ section.settings.h5 }}</h5>
+            <p>{{ section.settings.p5 }}</p>
+          </div>
+			-->
+				
+		</div>
+	</div>
+  	<div id="feature-booklet-top" class="text-center desktop">
+		<a href="javascript:;" class="m-btn" id="panlyer-tgl">Features Booklet <span class="pull-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+	</div>
+</section>
+
+<div id="panlyer_img" style="display:none">
+	<span class="panlyer_close_btn"><img src="{{'close.png' |asset_img_url:'40x'}}" width="40"></span>
+	<div id="publitas-embed-us2pq81wk9"></div>
+	<div id="publitas-embed-cikc7xxv7yg">
+  	</div>
+  
+  
+  	<script 
+            data-cfasync="false" 
+            data-height="undefined" 
+            data-publication="https://view.publitas.com/radusa/radusa-welcome-booklet-roexgg4plw34/" 
+            data-publication-aspect-ratio="2.8210838901262063" 
+            data-responsive="true" 
+            data-width="undefined" 
+            data-wrapperId="publitas-embed-cikc7xxv7yg" 
+            publitas-embed src="https://view.publitas.com/embed.js" 
+            type="text/javascript"></script>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Features",
+    "settings": [
+		{
+			"id": "background",
+			"type": "image_picker",
+			"label": "Background Image"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"label": "Heading",
+			"default": "Title"
+		},
+		{
+			"id": "icon1",
+			"type": "image_picker",
+			"label": "icon"
+		},
+		{
+			"id": "video1",
+			"type": "text",
+			"label": "Button text",
+			"default": "Click here"
+		},
+		{
+			"id": "video_url1",
+			"type": "video_url",
+			"label": "Video link",
+			"accept": ["youtube", "vimeo"],
+			"info": "Supports Youtube and Vimeo",
+			"default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+		},
+		{
+			"id": "h1",
+			"type": "text",
+			"label": "upper text"
+		},
+		{
+			"id": "p1",
+			"type": "textarea",
+			"label": "text"
+		},
+		{
+			"id": "icon2",
+			"type": "image_picker",
+			"label": "icon"
+		},
+		{
+			"id": "video2",
+			"type": "text",
+			"label": "Button text",
+			"default": "Click here"
+		},
+		{
+           "id": "video_url2",
+           "type": "video_url",
+           "label": "Video URL",
+           "accept": ["youtube", "vimeo"],
+           "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+           "info": "Text",
+           "placeholder": "Text"
+	 	},
+		{
+			"id": "h2",
+			"type": "text",
+			"label": "upper text"
+		},
+		{
+			"id": "p2",
+			"type": "textarea",
+			"label": "text"
+		},
+		{
+			"id": "icon3",
+			"type": "image_picker",
+			"label": "icon"
+		},
+		{
+			"id": "video3",
+			"type": "text",
+			"label": "Button text",
+			"default": "Click here"
+		},
+		{
+           "id": "video_url3",
+           "type": "video_url",
+           "label": "Video URL",
+           "accept": ["youtube", "vimeo"],
+           "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+           "info": "Text",
+           "placeholder": "Text"
+        },
+		{
+			"id": "h3",
+			"type": "text",
+			"label": "upper text"
+		},
+		{
+			"id": "p3",
+			"type": "textarea",
+			"label": "text"
+		},
+		{
+			"id": "icon4",
+			"type": "image_picker",
+			"label": "icon"
+		},
+		{
+			"id": "video4",
+			"type": "text",
+			"label": "Button text",
+			"default": "Click here"
+		},
+        {
+             "id": "video_url4",
+             "type": "video_url",
+             "label": "Video URL",
+             "accept": ["youtube", "vimeo"],
+             "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+             "info": "Text",
+             "placeholder": "Text"
+	    },
+		{
+			"id": "h4",
+			"type": "text",
+			"label": "upper text"
+		},
+		{
+			"id": "p4",
+			"type": "textarea",
+			"label": "text"
+		},
+		{
+			"id": "icon5",
+			"type": "image_picker",
+			"label": "icon"
+		},
+		{
+			"id": "video5",
+			"type": "text",
+			"label": "Button text",
+			"default": "Click here"
+		},
+		{
+           "id": "video_url5",
+           "type": "video_url",
+           "label": "Video URL",
+           "accept": ["youtube", "vimeo"],
+           "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+           "info": "Text",
+           "placeholder": "Text"
+	 	},
+		{
+			"id": "h5",
+			"type": "text",
+			"label": "upper text"
+		},
+		{
+			"id": "p5",
+			"type": "textarea",
+			"label": "text"
+		},
+		{
+		"id": "panlyer_image",
+			"type": "image_picker",
+			"label": "Panlyer Image"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

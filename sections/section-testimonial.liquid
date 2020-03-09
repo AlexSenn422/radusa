@@ -1,0 +1,100 @@
+<section id="section-testimonial">
+  <div class="container text-center">
+    <h2>{{section.settings.title}}</h2>
+    <div class="owl-carousel owl-theme desktop" id="testimonial-carousel">                                                                                                                                                                                                                                                                                                                                                                                                                                       
+      {% for block in section.blocks %}
+      <div class="item">
+        <div class="casing">
+          <div class="thumbnail test-video-wrpr">
+            <div class='embed-container'>  
+              <iframe class="lazyload" data-src="{{block.settings.video_url}}" frameborder="0"></iframe>
+            </div>
+          </div>
+
+          <div class="caption">
+            <p>{{block.settings.text}}</p>
+            <h4><a href="{{ block.settings.testi_url }}" target="_blank" class="testiblock_instagram">@{{block.settings.name}}</a></h4>						
+            <div class="quote"><i class="fa fa-quote-left fa-2x"></i></div>
+          </div>
+        </div>
+      </div>                                                                                                                                                                                                                                                                                                                                                                                                                                       
+      {% endfor %}
+    </div>
+
+
+    <div class="row mobile" style="margin-top: 50px;">
+      {% for block in section.blocks %}
+      <div class="col-xs-6">
+        <div class="thumbnail test-video-wrpr">
+          <div class='embed-container'>  
+            <iframe class="lazyload" data-src="{{block.settings.video_url}}" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div class="caption">
+          <p>{{block.settings.text}}</p>
+          <h4><a href="{{ block.settings.testi_url }}" target="_blank" class="testiblock_instagram">@{{block.settings.name}}</a></h4>						
+          <div class="quote"><i class="fa fa-quote-left fa-2x"></i></div>
+        </div>
+      </div>
+      {% assign tmp = forloop.index | modulo:2 %}
+      {%if tmp == 0%}
+      <div class="col-xs-12">
+      </div>
+      {%endif%}
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <a href="#" class="m-btn all-reviews">view all reviews<span class="pull-right"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Testimonial",
+    "settings": [
+		{
+			"type": "textarea",
+			"id": "title",
+			"label": "Heading",
+			"default": "HERE WHAT <span class='theme-colored'>PEOPLE</span> ARE SAYING"
+		}
+
+	],
+	"blocks": [
+		{
+          "type": "image",
+          "name": "Testimonial",
+          "settings": [{
+                  "type": "url",
+                  "id": "video_url",
+                  "label": "Video Url"
+              },
+              {
+                  "type": "text",
+                  "id": "text",
+                  "label": "Title"
+              },
+              {
+                  "type": "text",
+                  "id": "name",
+                  "label": "Name"
+              },
+              {
+                  "type": "url",
+                  "id": "testi_url",
+                  "label": "Url"
+              }
+
+          ]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

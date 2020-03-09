@@ -1,0 +1,123 @@
+<section id="section-banner">
+  <div class="video">
+    <div class="video_inner">
+  		<iframe id="banner-video" class="lazyload" data-src="{{section.settings.video_url}}?api=1&background=1&player_id=banner-video&autoplay=0&muted=1&loop=1" frameborder="0" allow="accelerometer; autoplay; fullscreen; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+    </div>
+  </div>
+  
+  <div class="container" style="position:relative;">
+    <div class="shop-button">
+      <a href="{{section.settings.shop_button_link}}" class="btn-shop clr-b"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> &nbsp; {{section.settings.shop_button}}</a>
+    </div>
+    <div class="video_controls_btn">
+      <a href="#" class="vol_btn" id="muteUnmute"><i class="fa fa-volume-mute" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<script>
+  if(document.body.clientWidth < 768)
+  {
+    document.getElementById("banner-video").setAttribute("data-src", "{{section.settings.video_url_mobile}}?api=1&background=1&player_id=hero-banner-video&autoplay=1&muted=1&loop=1");
+                                                         
+    document.getElementById("banner-video").classList.remove("lazyloaded");
+    document.getElementById("banner-video").classList.add("lazyload");
+  }
+  
+  
+  
+  var banner_video_player;                                                       
+  var banner_video_iframe = document.getElementById("banner-video");
+  
+  function bannerVideoInit(){
+      if (banner_video_iframe.classList.contains('lazyload') || banner_video_iframe.classList.contains('lazyloading') ) {
+        const storeSRC = banner_video_iframe.dataset.src;	
+      	banner_video_iframe.addEventListener('lazyloaded', () => {
+        	delete banner_video_iframe.dataset.src;
+        	banner_video_iframe.src = storeSRC;
+        	initBannerVideoPlayer();
+      	});
+      }
+      else if ( banner_video_iframe.classList.contains('lazyloaded') ){
+		const storeSRC = banner_video_iframe.dataset.src;
+		delete banner_video_iframe.dataset.src;
+        banner_video_iframe.src = storeSRC;
+        initBannerVideoPlayer();
+      }
+                                                         	
+  }                                             
+  function initBannerVideoPlayer(){
+      banner_video_player = new Vimeo.Player(banner_video_iframe); 
+	  banner_video_player.ready().then(function() {
+        setTimeout(function(){
+          banner_video_player.play();
+        }, 1000);
+        
+   		 // the player is ready
+		var muteUnmute = $('#muteUnmute');
+      	var isMuted = true;
+		muteUnmute.on('click', function(e){
+			e.preventDefault();
+                                                         
+            
+			if (isMuted) {
+				banner_video_player.setVolume(1);
+				muteUnmute.html("<i class='fa fa-volume-up' aria-hidden='true'></i>");
+                isMuted = false;
+			} else {
+                banner_video_player.setVolume(0);
+				muteUnmute.html("<i class='fa fa-volume-mute' aria-hidden='true'></i>");
+              	isMuted = true;
+			}
+		});       
+	  });
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+		{
+          "type": "video_url",
+          "id": "video_url",
+          "label": {
+            "en": "Video link"
+          },
+          "accept": [
+            "youtube",
+            "vimeo"
+          ]
+        },
+		{
+          "type": "video_url",
+          "id": "video_url_mobile",
+          "label": {
+            "en": "Mobile Video link"
+          },
+          "accept": [
+            "youtube",
+            "vimeo"
+          ]
+        },
+		{
+			"type": "text",
+			"id": "shop_button",
+			"label": "Shop Button Text"
+		},
+		{
+			"type": "url",
+			"id": "shop_button_link",
+			"label": "Shop Button Url"
+		}
+
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

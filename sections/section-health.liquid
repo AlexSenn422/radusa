@@ -1,0 +1,200 @@
+<section id="section-health">
+	<div class="container text-center">
+      
+		<h1 class="health_title">{{section.settings.section_heading}}</h1>
+		<p class="health-subtitle">{{section.settings.section_subtitle}}</p>
+		<div class="owl-carousel owl-theme" id="about_health-slider">
+			<div class="item">
+				<div class="health-box">
+                  	<div class="health-box-inner">
+                      <img src="{{ section.settings.image1 | img_url: 'x100' }}" class="img-responsive center-block"
+                          alt="">
+                      <h3 class="theme-colored">{{ section.settings.heading1 }}</h3>
+                      <p>{{ section.settings.para1 }}</p>
+                  	</div>
+                    <a href="{{section.settings.url_button1}}" class="health-button">Learn More</a>
+				</div>
+				
+			</div>
+
+			<div class="item">
+				<div class="health-box">
+                  	<div class="health-box-inner">
+                      <img src="{{ section.settings.image2 | img_url: 'x100' }}" class="img-responsive center-block"
+                          alt="">
+                      <h3 class="theme-colored">{{ section.settings.heading2 }}</h3>
+                      <p>{{ section.settings.para2 }}</p>
+                  	</div>
+                    <a href="{{section.settings.url_button2}}" class="health-button">Learn More</a>
+				</div>
+				
+			</div>
+
+			<div class="item">
+				<div class="health-box">
+                  	<div class="health-box-inner">
+                      <img src="{{ section.settings.image3 | img_url: 'x100' }}" class="img-responsive center-block"
+                          alt="">
+                      <h3 class="theme-colored">{{ section.settings.heading3 }}</h3>
+                      <p>{{ section.settings.para3 }}</p>
+                  	</div>
+                    <a href="{{section.settings.url_button3}}" class="health-button">Learn More</a>
+				</div>
+				
+			</div>
+
+			<div class="item">
+				<div class="health-box">
+                  	<div class="health-box-inner">
+                      <img src="{{ section.settings.image4 | img_url: 'x100' }}" class="img-responsive center-block"
+                          alt="">
+                      <h3 class="theme-colored">{{ section.settings.heading4 }}</h3>
+                      <p>{{ section.settings.para4 }}</p>
+                  	</div>
+                  
+                    <a href="{{section.settings.url_button4}}" class="health-button">Learn More</a>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="health-box">
+                  	<div class="health-box-inner">
+                      <img src="{{ section.settings.image5 | img_url: 'x100' }}" class="img-responsive center-block"
+                          alt="">
+                      <h3 class="theme-colored">{{ section.settings.heading5 }}</h3>
+                      <p>{{ section.settings.para5 }}</p>
+                  	</div>
+                    <a href="{{section.settings.url_button5}}" class="health-button">Learn More</a>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Health",
+    "settings": [
+		{
+			"type":"text",
+			"id":"section_heading",
+			"label":"Section Heading"
+		},
+		{
+			"type":"text",
+			"id":"section_subtitle",
+			"label":"Section Subtitle"
+		},
+		{
+			"id": "image1",
+			"type": "image_picker",
+			"label": "Image 1"
+		},
+		{
+			"id": "heading1",
+			"type": "text",
+			"label": "Heading Col 1"
+		},
+		{
+			"id": "para1",
+			"type": "textarea",
+			"label": "Text 1"
+		},
+		{
+			"type":"url",
+			"id":"url_button1",
+			"label":"url for button1"
+		},
+		{
+			"id": "image2",
+			"type": "image_picker",
+			"label": "Icon Image"
+		},
+		{
+			"id": "heading2",
+			"type": "text",
+			"label": "Heading Col 2"
+		},
+		{
+			"id": "para2",
+			"type": "textarea",
+			"label": "Text 2"
+		},
+		{
+			"type":"url",
+			"id":"url_button2",
+			"label":"url for button2"
+		},
+		{
+			"id": "image3",
+			"type": "image_picker",
+			"label": "Icon Image"
+		},
+		{
+			"id": "para3",
+			"type": "textarea",
+			"label": "Text 3"
+		},
+		{
+			"id": "heading3",
+			"type": "text",
+			"label": "Heading Col 3"
+		},
+		{
+			"type":"url",
+			"id":"url_button3",
+			"label":"url for button3"
+		},
+		{
+			"id": "image4",
+			"type": "image_picker",
+			"label": "Icon Image"
+		},
+		{
+			"id": "heading4",
+			"type": "text",
+			"label": "Heading Col 4"
+		},
+		{
+			"id": "para4",
+			"type": "textarea",
+			"label": "Text 4"
+		},
+		{
+			"type":"url",
+			"id":"url_button4",
+			"label":"url for button4"
+		},
+		{
+			"id": "image5",
+			"type": "image_picker",
+			"label": "Icon Image"
+		},
+		{
+			"id": "heading5",
+			"type": "text",
+			"label": "Heading Col 5"
+		},
+		{
+			"id": "para5",
+			"type": "textarea",
+			"label": "Text 5"
+		},
+		{
+			"type":"url",
+			"id":"url_button5",
+			"label":"url for button5"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

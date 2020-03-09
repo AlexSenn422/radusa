@@ -1,0 +1,148 @@
+<section id="section-video">
+	<div id="chef-video-wrapper" class="video-player_wrapper">
+		<div class="video_player">
+          	<img class="btn-play" src="{{ 'play-button-white.png' | asset_url }}"/>
+			{% if section.settings.video_url.type == 'youtube' %}
+				<iframe id="ytplayer" type="text/html" width="640" height="360"
+						src="https://www.youtube.com/embed/{{section.settings.video_url.id}}"
+						frameborder="0"></iframe>
+			{% elsif section.settings.video_url.type == 'vimeo' %}
+				 <iframe id="chef_video_vimeo_player" class="lazyload" data-custom-src="https://player.vimeo.com/video/{{section.settings.video_url.id}}?api=1&player_id=chef_video_vimeo_player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
+			{% endif %}
+		</div>
+	</div>
+  
+  	<div id="life-video-wrapper" class="video-player_wrapper" >
+		<div class="video_player">
+          	<img class="btn-play" src="{{ 'play-button-white.png' | asset_url }}"/>
+			{% if section.settings.lifestyle_video_url.type == 'youtube' %}
+				<iframe id="ytplayer" type="text/html" width="640" height="360"
+						src="https://www.youtube.com/embed/{{section.settings.lifestyle_video_url.id}}"
+						frameborder="0"></iframe>
+			{% elsif section.settings.lifestyle_video_url.type == 'vimeo' %}
+				 <iframe id="life_video_vimeo_player" class="lazyload" data-custom-src="https://player.vimeo.com/video/{{section.settings.lifestyle_video_url.id}}?api=1&player_id=life_video_vimeo_player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+<script>
+  var chef_vimeo_iframe = document.getElementById("chef_video_vimeo_player");
+  var chefVideoPlayer; 
+  
+  var life_vimeo_iframe = document.getElementById('life_video_vimeo_player');
+  var lifeVideoPlayer;
+  
+  function videoSectionInit(){
+      if (chef_vimeo_iframe.classList.contains('lazyload')) {
+        const storeSRC = chef_vimeo_iframe.dataset.customSrc;	
+      	chef_vimeo_iframe.addEventListener('lazyloaded', () => {
+        	delete chef_vimeo_iframe.dataset.customSrc;
+        	chef_vimeo_iframe.src = storeSRC;
+        	initChefVideoPlayer();
+      	});
+      }
+      else if ( chef_vimeo_iframe.classList.contains('lazyloaded') ){
+		const storeSRC = chef_vimeo_iframe.dataset.customSrc;
+		delete chef_vimeo_iframe.dataset.customSrc;
+        chef_vimeo_iframe.src = storeSRC;
+        initChefVideoPlayer();
+      }
+  
+      if (life_vimeo_iframe.classList.contains('lazyload')) {
+        const storeSRC = life_vimeo_iframe.dataset.customSrc;	
+      	life_vimeo_iframe.addEventListener('lazyloaded', () => {
+        	delete life_vimeo_iframe.dataset.customSrc;
+        	life_vimeo_iframe.src = storeSRC;
+        	initLifeVideoPlayer();
+      	});
+      }
+      else if ( life_vimeo_iframe.classList.contains('lazyloaded') ){
+		const storeSRC = life_vimeo_iframe.dataset.customSrc;
+		delete life_vimeo_iframe.dataset.customSrc;
+        life_vimeo_iframe.src = storeSRC;
+        initLifeVideoPlayer();
+      }
+  }
+  
+  function initChefVideoPlayer(){
+	  chefVideoPlayer = new Vimeo.Player(chef_vimeo_iframe); 
+      $("#chef-video-wrapper img.btn-play").click(function(){
+        chefVideoPlayer.getPaused().then(function(paused) {
+            if ( paused ) {
+              	$("#chef-video-wrapper img.btn-play").addClass("hidden");
+				chefVideoPlayer.play();
+            }
+            else{
+              	$("#chef-video-wrapper img.btn-play").removeClass("hidden");
+				chefVideoPlayer.pause();
+            }
+        }).catch(function(error) {
+            // an error occurred
+        });
+      });
+
+      chefVideoPlayer.on('play', function() {
+        $("#chef-video-wrapper img.btn-play").addClass("hidden");
+      });
+
+      chefVideoPlayer.on('pause', function() {
+        $("#chef-video-wrapper img.btn-play").removeClass("hidden");
+      });
+  }
+  
+  function initLifeVideoPlayer(){
+      lifeVideoPlayer = new Vimeo.Player(life_vimeo_iframe);
+
+      $("#life-video-wrapper img.btn-play").click(function(){
+        lifeVideoPlayer.getPaused().then(function(paused) {
+            // paused = whether or not the player is paused
+            if ( paused ) {
+              $("#life-video-wrapper img.btn-play").addClass("hidden");
+              lifeVideoPlayer.play();
+            }
+            else{
+              $("#life-video-wrapper img.btn-play").removeClass("hidden");
+              lifeVideoPlayer.pause();
+            }
+        }).catch(function(error) {
+            // an error occurred
+        });
+      });
+
+      lifeVideoPlayer.on('play', function() {
+        $("#life-video-wrapper img.btn-play").addClass("hidden");
+      });
+
+      lifeVideoPlayer.on('pause', function() {
+        $("#life-video-wrapper img.btn-play").removeClass("hidden");
+      });
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Video",
+    "settings": [
+		{
+			"id": "video_url",
+			"type": "video_url",
+			"label": "Video URL",
+			"accept": ["youtube", "vimeo"]
+		},
+        {
+			"id": "lifestyle_video_url",
+			"type": "video_url",
+			"label": "Lifestyle Video URL",
+			"accept": ["youtube", "vimeo"]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+	
+{% endjavascript %}

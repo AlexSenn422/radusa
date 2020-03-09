@@ -1,0 +1,132 @@
+<section id="section-shipping">
+  <div class="container text-center">
+    <div class="row desktop">
+      <div class="col-md-4">
+        <a href="javascript:void(0)" class="url-ship-section">
+          <img src="{{ section.settings.icon1 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+          <h4>{{ section.settings.title1 }}</h4>
+          <p>{{ section.settings.p1 }}</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/gview?url={{section.settings.url_icon2}}&embedded=true" class="url-ship-section fancy">
+          <img src="{{ section.settings.icon2 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+          <h4>{{ section.settings.title2 }}</h4>
+          <p>{{ section.settings.p2 }}</p>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="javascript:void(0)" class="url-ship-section">
+          <img src="{{ section.settings.icon3 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+          <h4>{{ section.settings.title3 }}</h4>
+          <p>{{ section.settings.p3 }}</p>
+        </a>
+      </div>          
+    </div>
+
+
+    <div class="row mobile">
+      <div class="owl-carousel owl-theme" id="ship-carousel">
+        <div class="item">
+          <a href="javascript:void(0)" class="url-ship-section">
+            <img src="{{ section.settings.icon1 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+            <h4>{{ section.settings.title1 }}</h4>
+            <p>{{ section.settings.p1 }}</p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="https://docs.google.com/gview?url={{section.settings.url_icon2}}&embedded=true" class="url-ship-section fancy">
+            <img src="{{ section.settings.icon2 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+            <h4>{{ section.settings.title2 }}</h4>
+            <p>{{ section.settings.p2 }}</p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="javascript:void(0)" class="url-ship-section">
+            <img src="{{ section.settings.icon3 | img_url: '300x'}}" class="lazyload img-responsive center-block" alt="">
+            <h4>{{ section.settings.title3 }}</h4>
+            <p>{{ section.settings.p3 }}</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Shipping",
+    "settings": [
+		{
+			"type":"url",
+			"id":"url_icon1",
+			"label":"Url Icon 1"
+		},
+		{
+			"id": "icon1",
+			"type": "image_picker",
+			"label": "image"
+		},
+		{
+			"id": "title1",
+			"type": "text",
+			"label": "Title"
+		},
+		{
+			"id": "p1",
+			"type": "textarea",
+			"label": "Text"
+		},
+		{
+			"type":"url",
+			"id":"url_icon2",
+			"label":"Url Icon 2"
+		},
+		{
+			"id": "icon2",
+			"type": "image_picker",
+			"label": "image"
+		},
+		{
+			"id": "title2",
+			"type": "text",
+			"label": "Title"
+		},
+		{
+			"id": "p2",
+			"type": "textarea",
+			"label": "Text"
+		},
+		{
+			"type":"url",
+			"id":"url_icon3",
+			"label":"Url Icon 3"
+		},
+		{
+			"id": "icon3",
+			"type": "image_picker",
+			"label": "image"
+		},
+		{
+			"id": "title3",
+			"type": "text",
+			"label": "Title"
+		},
+		{
+			"id": "p3",
+			"type": "textarea",
+			"label": "Text"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

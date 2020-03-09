@@ -1,0 +1,1728 @@
+{
+  "current": {
+    "color_primary": "#eb4f47",
+    "color_header_text": "#e1c9b4",
+    "color_primary_heading_text": "#4a4a4a",
+    "color_primary_body_text": "#4a4a4a",
+    "color_footer_text": "#4a4a4a",
+    "color_button_text": "#ffffff",
+    "color_header_bg": "#fff",
+    "color_footer_bg": "#eae7e0",
+    "color_main_bg": "#faf9f6",
+    "color_secondary_bg": "#f4f1ec",
+    "color_product_cards": "#fff",
+    "color_form_elements": "#fff",
+    "color_cart_flag": "#eb4f47",
+    "type_base_size": "62.5%",
+    "type_header_font": "monotype_baskerville_n4",
+    "type_base_font": "avenir_next_n4",
+    "show_cart_drawer": true,
+    "show_cart_note": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_facebook_link": "",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "",
+    "supported_currencies": "GBP USD EUR SAR",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990c6",
+    "checkout_button_color": "#1990c6",
+    "checkout_error_color": "#ff6d6d",
+    "logo_max_height": "15",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1486649858082": {
+            "type": "menu",
+            "settings": {
+              "title": "QUICK LINKS",
+              "linklist": "footer"
+            }
+          },
+          "1564413094168": {
+            "type": "menu",
+            "settings": {
+              "title": "HELP",
+              "linklist": "footer-bottom"
+            }
+          },
+          "1564413137955": {
+            "type": "social",
+            "settings": {
+              "title": "Follow Us"
+            }
+          },
+          "1564413157928": {
+            "type": "address",
+            "settings": {
+              "title": "Contact info",
+              "address_text": "<ul>\n<li>\n<i class=\"fa fa-envelope\"><\/i><a href=\"mailto:info@radusa.co\">info@radusa.co<\/a>\n<\/li>\n<li>\n<i class=\"fa fa-mobile\"><\/i>888.880.0908<\/li>\n<li>\n<i class=\"fa fa-map-marker\"><\/i>Malibu, CA<br>\n<\/li>\n<\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "1486649858082",
+          "1564413094168",
+          "1564413137955",
+          "1564413157928"
+        ],
+        "settings": {
+          "social_facebook_link": "https:\/\/www.facebook.com\/radicalpan",
+          "social_twitter_link": "",
+          "social_pinterest_link": "https:\/\/www.pinterest.com\/boards\/radicalpan",
+          "social_instagram_link": "https:\/\/www.instagram.com\/rad.usa",
+          "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCO7iYGK0tiXOjL3Syv2kYnQ",
+          "social_tumblr_link": "",
+          "copyright_link": "",
+          "copyright_link_text": ""
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "products": "2",
+          "rows": "6",
+          "product_tags_enable": false,
+          "product_sorting_enable": false,
+          "collection_hero_image": false,
+          "collection_hero_image_parallax": false,
+          "grid_style": "collage",
+          "show_spacing": false,
+          "show_vendor": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_custom_button": true,
+          "custom_button_url": "https:\/\/www.amazon.com\/dp\/B07RV4ZN6M\/?tag=radusa-20",
+          "show_atc": false,
+          "order_button": "BUY NOW",
+          "order_button_effect": true,
+          "lifetime_warranty_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/Our_Guarantee.pdf"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "grid_style": "collage",
+          "articles": "2",
+          "rows": "4",
+          "blog_show_date": true
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "image_parallax": true,
+          "show_date": true,
+          "show_author": false,
+          "show_share_buttons": true
+        }
+      },
+      "section-banner": {
+        "type": "section-banner",
+        "settings": {
+          "video_url": "https:\/\/player.vimeo.com\/video\/340487131",
+          "video_url_mobile": "https:\/\/player.vimeo.com\/video\/341688268",
+          "shop_button": "Shop Now",
+          "shop_button_link": "#section-product"
+        }
+      },
+      "section-features": {
+        "type": "section-features",
+        "settings": {
+          "background": "",
+          "title": "Radical Pan <span class=\"theme-colored\">Features<\/span>",
+          "icon1": "shopify:\/\/shop_images\/Group_40.png",
+          "video1": "Watch Video",
+          "video_url1": "https:\/\/vimeo.com\/354988160",
+          "h1": "PATENTED HIGH-RISE LIP | NON-STICK COATING",
+          "p1": "Our attractive, innovative high-rise lip and non-toxic, non-stick coating combine to make cooking easier, less messy, and healthier.",
+          "icon2": "shopify:\/\/shop_images\/Group_29.png",
+          "video2": "Watch Video",
+          "video_url2": "https:\/\/vimeo.com\/354986339",
+          "h2": "COOL-GRIP STEALTH HANDLE | HARD ANODIZED ALUMINUM",
+          "p2": "The stealth-grip handle keeps you cool while you cook, preventing heat transfer from the stove with our V-technology while the hard anodized body prevents scratches and corrosion.",
+          "icon3": "shopify:\/\/shop_images\/Group_39.png",
+          "video3": "Watch Video",
+          "video_url3": "https:\/\/vimeo.com\/354988657",
+          "h3": "USED IN EVERY KITCHEN, ON ANY SURFACE",
+          "p3": "Chef Oren tested, consumer approved, this pan is perfect for gas, induction, and electric stoves and is safe to cook in ovens up to 500°F.",
+          "icon4": "shopify:\/\/shop_images\/Group_33.png",
+          "video4": "Watch Video",
+          "video_url4": "https:\/\/vimeo.com\/354989901",
+          "h4": "HEALTH & SAFETY TESTED AND APPROVED",
+          "p4": "We went through rigorous (and very expensive) consumer health and safety testing with the FDA, SGS, and NSF. This pan was approved and certified by all three -- the first of its kind.",
+          "icon5": "shopify:\/\/shop_images\/Group_33.png",
+          "video5": "Click here",
+          "video_url5": "https:\/\/vimeo.com\/340515901",
+          "h5": "COMPATIBLE WITH GAS, ELECTRIC & INDUCTION",
+          "p5": "",
+          "panlyer_image": ""
+        }
+      },
+      "section-product": {
+        "type": "section-product",
+        "settings": {
+          "featured_product": "radical-pan",
+          "order_button": "BUY NOW",
+          "order_button_effect": false,
+          "lifetime_warranty_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/Our_Guarantee.pdf"
+        }
+      },
+      "section-health": {
+        "type": "section-health",
+        "settings": {
+          "section_heading": "ALL ABOUT <span class=\"theme-colored\">HEALTH<\/span>",
+          "section_subtitle": "The Radical Pan passed the highest <span class=\"theme-colored\">worldwide certifications<\/span>",
+          "image1": "shopify:\/\/shop_images\/Asset_6_3x_df7ab65a-b1e8-4a89-8aa7-98a66cd467ce.png",
+          "heading1": "PFOA FREE",
+          "para1": "Research has shown a correlation between exposure to PFOA and adverse health effectos. So unlike some other non-stick pans, we don’t use PFOAs.",
+          "url_button1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/PFOAFREE-1.jpg?66914",
+          "image2": "shopify:\/\/shop_images\/Asset_5_3x_8a4fb096-d2bd-41b9-8edc-8efc62d4f792.png",
+          "heading2": "TOXIN FREE",
+          "para2": "Not only PFOA-FREE but also NO PFOS, NO LEAD, and NO CADMIUM. Because we believe that what’s in your food is as important as what your food’s cooked in.",
+          "url_button2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/FDA-1.jpg?66914",
+          "image3": "shopify:\/\/shop_images\/Asset_4_3x_89230a09-aaa0-4be8-9023-aaab847b7564.png",
+          "para3": "With the Eclipse® Non-stick, you won’t need to add as much butter or any other fats from sticking to the pan. That means all of the flavor, but with fewer calories.",
+          "heading3": "NON-STICK MEANS FEWER CALORIES",
+          "url_button3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/Eclipse-Internally-Reinforced-Nonstick-Coatings-1.jpg?66914",
+          "image4": "shopify:\/\/shop_images\/Asset_3_3x_009e8710-4776-4619-8d0d-c1f73d6fb730.png",
+          "heading4": "SGS APPROVED",
+          "para4": "The Radical Pan is tested by the highest standards of health and conductibility. SGS is the world’s leading inspection, verification, testing and certification company.",
+          "url_button4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/SGS-1.jpg?66914",
+          "image5": "shopify:\/\/shop_images\/NSF_CERTIFIED.png",
+          "heading5": "NSF CERTIFIED",
+          "para5": "NSF International is a global independent organization that writes standards, protocols and tests and certifies products to protect the environment.",
+          "url_button5": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/NSF-1.jpg?66914"
+        }
+      },
+      "section-video": {
+        "type": "section-video",
+        "settings": {
+          "video_url": "https:\/\/player.vimeo.com\/video\/339274282",
+          "lifestyle_video_url": "https:\/\/player.vimeo.com\/video\/340917285"
+        }
+      },
+      "section-testimonial": {
+        "type": "section-testimonial",
+        "blocks": {
+          "1564379766068": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340555953",
+              "text": "Cook & flip and look like a professional",
+              "name": "Jessicalmichel",
+              "testi_url": "https:\/\/www.instagram.com\/jessicamichel\/?hl=en"
+            }
+          },
+          "1564379800330": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340591655",
+              "text": "This pan is truly Radical!",
+              "name": "OwenWilson",
+              "testi_url": "https:\/\/twitter.com\/owenwilson1?lang=en"
+            }
+          },
+          "1564379832936": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340583944",
+              "text": "This is great. I love this!",
+              "name": "MartinBullard",
+              "testi_url": "https:\/\/www.instagram.com\/MartynBullard\/"
+            }
+          },
+          "1564379859693": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/380106292",
+              "text": "Favorite New Pan!",
+              "name": "Brooke Burke",
+              "testi_url": "https:\/\/www.instagram.com\/brookeburke\/?hl=en"
+            }
+          },
+          "1564379892090": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340582117",
+              "text": "This pan is a jewel, it is just amazing!",
+              "name": "Captain Pascal in Monaco 🇲🇨",
+              "testi_url": ""
+            }
+          },
+          "1564379921749": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340579870",
+              "text": "I feel like a legit chef!",
+              "name": "KateMcClamb",
+              "testi_url": ""
+            }
+          },
+          "1564379943553": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340581009",
+              "text": "I just got really excited about the pan",
+              "name": "ChefJessica",
+              "testi_url": ""
+            }
+          },
+          "1569961821635": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/363654722",
+              "text": "Staying Tough in Back Country",
+              "name": "John Raede",
+              "testi_url": ""
+            }
+          },
+          "1564379958162": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340582001",
+              "text": "This is a perfect pan. Nothing sticks to it!",
+              "name": "Fenny from Hungary 🇭🇺",
+              "testi_url": ""
+            }
+          },
+          "1564379986861": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/340582714",
+              "text": "We thought about every feature imaginable",
+              "name": "Cheforen",
+              "testi_url": ""
+            }
+          },
+          "1564380006963": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/345643767",
+              "text": "Love it.",
+              "name": "Mario Gomez",
+              "testi_url": ""
+            }
+          },
+          "1564380024533": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/345713538",
+              "text": "Flipping like a pro.",
+              "name": "Oscar Mora",
+              "testi_url": ""
+            }
+          },
+          "1574550628729": {
+            "type": "image",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/375024265",
+              "text": "It's not a board, it's a pan... you can actually cook with it!",
+              "name": "Kelly Slater",
+              "testi_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1564379766068",
+          "1564379800330",
+          "1564379832936",
+          "1564379859693",
+          "1564379892090",
+          "1564379921749",
+          "1564379943553",
+          "1569961821635",
+          "1564379958162",
+          "1564379986861",
+          "1564380006963",
+          "1564380024533",
+          "1574550628729"
+        ],
+        "settings": {
+          "title": "HEAR WHAT <span class=\"theme-colored\">PEOPLE<\/span> ARE SAYING"
+        }
+      },
+      "section-gallery": {
+        "type": "section-gallery",
+        "blocks": {
+          "1564396065903": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1-min.png",
+              "link": ""
+            }
+          },
+          "1564396156947": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2-min.png",
+              "link": ""
+            }
+          },
+          "1564396168141": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3-min.png",
+              "link": ""
+            }
+          },
+          "1564396174519": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4-min.png",
+              "link": ""
+            }
+          },
+          "1564396183621": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/5-min.png",
+              "link": ""
+            }
+          },
+          "1564396189479": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cooking.png",
+              "link": ""
+            }
+          },
+          "1564396203541": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/7-min.png",
+              "link": ""
+            }
+          },
+          "1564396211136": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/8-min.png",
+              "link": ""
+            }
+          },
+          "1564396231626": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/11-min.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1564396065903",
+          "1564396156947",
+          "1564396168141",
+          "1564396174519",
+          "1564396183621",
+          "1564396189479",
+          "1564396203541",
+          "1564396211136",
+          "1564396231626"
+        ],
+        "settings": {
+          "video_url": "https:\/\/vimeo.com\/340917285"
+        }
+      },
+      "section-blog": {
+        "type": "section-blog",
+        "blocks": {
+          "1564406650085": {
+            "type": "image",
+            "settings": {
+              "title": "Juicy New York Strip",
+              "url": "https:\/\/player.vimeo.com\/video\/355453204"
+            }
+          },
+          "1564406504213": {
+            "type": "image",
+            "settings": {
+              "title": "Mixed Greens in a Parmesan Bowl",
+              "url": "https:\/\/player.vimeo.com\/video\/355454944"
+            }
+          },
+          "1564406556117": {
+            "type": "image",
+            "settings": {
+              "title": "Sautéed Mushrooms with Asian Bok Choy",
+              "url": "https:\/\/player.vimeo.com\/video\/355455228"
+            }
+          },
+          "1564406462487": {
+            "type": "image",
+            "settings": {
+              "title": "Oren's Shakshuka",
+              "url": "https:\/\/player.vimeo.com\/video\/356317200"
+            }
+          },
+          "1564406543977": {
+            "type": "image",
+            "settings": {
+              "title": "Perfect Eggs: 101",
+              "url": "https:\/\/player.vimeo.com\/video\/356317376"
+            }
+          },
+          "1564406663535": {
+            "type": "image",
+            "settings": {
+              "title": "One-Pan Tacos",
+              "url": "https:\/\/player.vimeo.com\/video\/356317710"
+            }
+          },
+          "1564406594733": {
+            "type": "image",
+            "settings": {
+              "title": "Steak and Eggs",
+              "url": "https:\/\/player.vimeo.com\/video\/356317509"
+            }
+          },
+          "1564406676230": {
+            "type": "image",
+            "settings": {
+              "title": "Seared Scallops with Peach Salsa",
+              "url": "https:\/\/player.vimeo.com\/video\/356689082"
+            }
+          },
+          "1564406621262": {
+            "type": "image",
+            "settings": {
+              "title": "Vegan Risotto",
+              "url": "https:\/\/player.vimeo.com\/video\/364190133"
+            }
+          },
+          "1564406491556": {
+            "type": "image",
+            "settings": {
+              "title": "Vegan Sushi",
+              "url": "https:\/\/player.vimeo.com\/video\/364194267"
+            }
+          },
+          "1564406606336": {
+            "type": "image",
+            "settings": {
+              "title": "Sweet Corn Ravioli",
+              "url": "https:\/\/player.vimeo.com\/video\/368576759"
+            }
+          },
+          "1564406427351": {
+            "type": "image",
+            "settings": {
+              "title": "Prime Rib",
+              "url": "https:\/\/player.vimeo.com\/video\/341923801"
+            }
+          },
+          "1564406449021": {
+            "type": "image",
+            "settings": {
+              "title": "Shrimp And Avocado Taco Salad",
+              "url": "https:\/\/player.vimeo.com\/video\/341923964"
+            }
+          },
+          "1564406477082": {
+            "type": "image",
+            "settings": {
+              "title": "Creamy Garlic Dijon Chicken",
+              "url": "https:\/\/player.vimeo.com\/video\/341923997"
+            }
+          },
+          "1564406518055": {
+            "type": "image",
+            "settings": {
+              "title": "Meat Lover's Calzone",
+              "url": "https:\/\/player.vimeo.com\/video\/341923747"
+            }
+          },
+          "1564406530159": {
+            "type": "image",
+            "settings": {
+              "title": "Chocolate Chip Cookies",
+              "url": "https:\/\/player.vimeo.com\/video\/341924246"
+            }
+          },
+          "1564406568251": {
+            "type": "image",
+            "settings": {
+              "title": "Grilled Plate",
+              "url": "https:\/\/player.vimeo.com\/video\/341924414"
+            }
+          },
+          "1564406580722": {
+            "type": "image",
+            "settings": {
+              "title": "Buffalo Cauliflower Tacos",
+              "url": "https:\/\/player.vimeo.com\/video\/341924400"
+            }
+          },
+          "1564406637309": {
+            "type": "image",
+            "settings": {
+              "title": "Chicken Fajita Quesadillas",
+              "url": "https:\/\/player.vimeo.com\/video\/342374091"
+            }
+          },
+          "1564406688585": {
+            "type": "image",
+            "settings": {
+              "title": "Swedish Meatball Pasta",
+              "url": "https:\/\/player.vimeo.com\/video\/341924198"
+            }
+          }
+        },
+        "block_order": [
+          "1564406650085",
+          "1564406504213",
+          "1564406556117",
+          "1564406462487",
+          "1564406543977",
+          "1564406663535",
+          "1564406594733",
+          "1564406676230",
+          "1564406621262",
+          "1564406491556",
+          "1564406606336",
+          "1564406427351",
+          "1564406449021",
+          "1564406477082",
+          "1564406518055",
+          "1564406530159",
+          "1564406568251",
+          "1564406580722",
+          "1564406637309",
+          "1564406688585"
+        ],
+        "settings": {
+          "review_product": "radical-pan",
+          "featured_post1": "recipes\/perfectly-seared-salmon",
+          "featured_title1": "The Radical Pan Blog",
+          "blog1": "recipes",
+          "featured_post2": "",
+          "featured_title2": "Videos",
+          "blog2": "",
+          "featured_post3": "",
+          "featured_title3": "Title 3",
+          "blog3": "reviews"
+        }
+      },
+      "section-shipping": {
+        "type": "section-shipping",
+        "settings": {
+          "url_icon1": "",
+          "icon1": "shopify:\/\/shop_images\/Group_58.png",
+          "title1": "Free U.S. Shipping & Returns",
+          "p1": "We're so confident you'll love our pan. <br>Try it out... on us!   <br>",
+          "url_icon2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0018\/2727\/4827\/files\/Our_Guarantee.pdf",
+          "icon2": "shopify:\/\/shop_images\/Group_57.png",
+          "title2": "Lifetime Warranty",
+          "p2": "Shop worry free. We got your back!",
+          "url_icon3": "",
+          "icon3": "shopify:\/\/shop_images\/Group_60.png",
+          "title3": "Exceptional Customer Care",
+          "p3": "Our dedicated team is ready to answer all your cookware needs."
+        }
+      },
+      "section-instagram": {
+        "type": "section-instagram",
+        "blocks": {
+          "1564412121709": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1.jpg",
+              "link": "https:\/\/www.instagram.com\/rad.usa\/"
+            }
+          },
+          "1564412190892": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3.jpg",
+              "link": "https:\/\/www.instagram.com\/rad.usa\/"
+            }
+          },
+          "1564412235784": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2.jpg",
+              "link": "https:\/\/www.instagram.com\/rad.usa\/"
+            }
+          },
+          "1564412275046": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4.jpg",
+              "link": "https:\/\/www.instagram.com\/rad.usa\/"
+            }
+          }
+        },
+        "block_order": [
+          "1564412121709",
+          "1564412190892",
+          "1564412235784",
+          "1564412275046"
+        ],
+        "settings": {}
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "You may also like",
+          "show_spacing": false,
+          "show_vendor": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": false
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Warm": {
+      "color_primary": "#eb4f47",
+      "color_header_text": "#e1c9b4",
+      "color_primary_heading_text": "#4a4a4a",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#4a4a4a",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#eae7e0",
+      "color_main_bg": "#faf9f6",
+      "color_secondary_bg": "#f4f1ec",
+      "color_product_cards": "#fff",
+      "color_form_elements": "#fff",
+      "color_cart_flag": "#eb4f47",
+      "type_base_size": "62.5%",
+      "type_header_font": "monotype_baskerville_n4",
+      "type_base_font": "avenir_next_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "logo_max_height": "15",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": "15",
+            "enable_transparent": true,
+            "transparent_text_color": "#ffffff",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486649858082": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486649858082"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "1476381402840": {
+          "type": "video",
+          "settings": {}
+        },
+        "1476381658595": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "image": "",
+            "alignment": "top left",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "1478026923193": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#faf9f6",
+            "image_crop": "circle",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "1478027260401": {
+          "type": "quotes",
+          "blocks": {
+            "1478027260401-0": {
+              "type": "quote",
+              "settings": {}
+            },
+            "1478027389453": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1478027260401-0",
+            "1478027389453"
+          ],
+          "settings": {
+            "color_bg": "#000000",
+            "color_text": "#ffffff",
+            "autoplay_speed": "6000"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486649146314": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649185448": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649208703": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649267624": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486649146314",
+            "1486649185448",
+            "1486649208703",
+            "1486649267624"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#313131",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": 30
+          }
+        },
+        "1486649413883": {
+          "type": "gallery",
+          "blocks": {
+            "1486649413883-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "1486649413883-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486649413883-0",
+            "1486649413883-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#3b3b3b",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.4"
+          }
+        },
+        "1486649522802": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#cbc8c1",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false
+          }
+        },
+        "1486649604878": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486649604878-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#9d988b"
+              }
+            },
+            "1486649604878-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#cdcdcd"
+              }
+            },
+            "1486649604878-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#a7a59e"
+              }
+            },
+            "1486649769533": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#383a3c"
+              }
+            }
+          },
+          "block_order": [
+            "1486649604878-0",
+            "1486649604878-1",
+            "1486649604878-2",
+            "1486649769533"
+          ],
+          "settings": {
+            "use_second_button": false,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#404040",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.2"
+          }
+        },
+        "1486649811524": {
+          "type": "featured-product",
+          "settings": {
+            "layout": "square",
+            "image_size": "cover",
+            "background_color": "transparent",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492806970384": {
+          "type": "custom-content",
+          "blocks": {
+            "1492806970384-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h4",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492806970384-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "1478026923193",
+        "1476381402840",
+        "1476381658595",
+        "1486649413883",
+        "1478027260401",
+        "1492806970384",
+        "1486649522802",
+        "1486649604878",
+        "1486649811524"
+      ]
+    },
+    "Light": {
+      "color_primary": "#dfa160",
+      "color_header_text": "#dfa160",
+      "color_primary_heading_text": "#000000",
+      "color_primary_body_text": "#4a4a4a",
+      "color_footer_text": "#ffffff",
+      "color_button_text": "#ffffff",
+      "color_header_bg": "#fff",
+      "color_footer_bg": "#dfa160",
+      "color_main_bg": "#ffffff",
+      "color_secondary_bg": "#f7f7f7",
+      "color_product_cards": "#ebebeb",
+      "color_form_elements": "#f1f1f1",
+      "color_cart_flag": "#b76b50",
+      "type_base_size": "62.5%",
+      "type_header_font": "open_sans_n7",
+      "type_base_font": "open_sans_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": "15",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486583739899": {
+              "type": "video",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486583739899"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#000000",
+            "overlay_opacity": 50
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "bag",
+            "logo_max_height": "18",
+            "enable_transparent": true,
+            "transparent_text_color": "#dfa160",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486586799558": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486586799558"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#fafafa",
+            "image_crop": "square",
+            "alignment": "center center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "checkmark",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-2": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": true,
+                "slide_button_text": "",
+                "slide_button_url": ""
+              }
+            },
+            "1487016418120": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#ebebeb",
+                "show_image": false,
+                "slide_image": "",
+                "slide_title": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-2",
+            "1486503036275-1",
+            "1487016418120"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#000000",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_text": "#000000",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1486583009346": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#ffffff",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "About us",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486584613697": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "center center",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#ffffff",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486584983006": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#dfa160",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": false,
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "6",
+            "product_tags_enable": false,
+            "product_sorting_enable": true,
+            "collection_hero_image": true,
+            "collection_hero_image_parallax": true,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": true,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492008725684": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "x-large",
+            "alignment": "top center",
+            "title": "",
+            "text": "",
+            "text_size": "medium",
+            "use_second_button": false,
+            "button_label": "Read our blog",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#3a3a3a",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "1492807242211": {
+          "type": "custom-content",
+          "blocks": {
+            "1492807242211-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492807242211-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "feature-row",
+        "1486584613697",
+        "1486583009346",
+        "gallery",
+        "1492807242211",
+        "1486584983006",
+        "featured-slider",
+        "1492008725684"
+      ]
+    },
+    "Cold": {
+      "color_primary": "#00b490",
+      "color_header_text": "#00b490",
+      "color_primary_heading_text": "#ffffff",
+      "color_primary_body_text": "#a9a9a9",
+      "color_footer_text": "#000000",
+      "color_button_text": "#000000",
+      "color_header_bg": "#191c1b",
+      "color_footer_bg": "#00b490",
+      "color_main_bg": "#000000",
+      "color_secondary_bg": "#191c1b",
+      "color_product_cards": "#191c1b",
+      "color_form_elements": "#292c2b",
+      "color_cart_flag": "#ffffff",
+      "type_base_size": "62.5%",
+      "type_header_font": "titillium_web_n7",
+      "type_base_font": "lato_n4",
+      "show_cart_drawer": true,
+      "show_cart_note": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#1990C6",
+      "checkout_button_color": "#1990C6",
+      "checkout_error_color": "#ff6d6d",
+      "transparent_logo": "",
+      "logo_max_height": "15",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1486663529263": {
+              "type": "video",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1486663529263"
+          ],
+          "settings": {
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": 60
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "icon": "cart",
+            "logo_max_height": "16",
+            "enable_transparent": true,
+            "transparent_text_color": "#00b490",
+            "primary_navigation": "main-menu",
+            "secondary_navigation": "footer",
+            "show_social_icons": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1486664283354": {
+              "type": "menu",
+              "settings": {
+                "link_list": "footer"
+              }
+            }
+          },
+          "block_order": [
+            "1486664283354"
+          ],
+          "settings": {
+            "show_social_icons": true,
+            "show_payment_icons": true,
+            "enable_parallax": true,
+            "show_newsletter": true,
+            "newsletter_heading": "Sign up for updates"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "#191c1b",
+            "image_crop": "circle",
+            "alignment": "center center",
+            "use_second_button": false,
+            "desktop_layout": "left",
+            "mobile_layout": "top"
+          }
+        },
+        "gallery": {
+          "type": "gallery",
+          "blocks": {
+            "1486502632685-0": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502639654": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            },
+            "1486502643820": {
+              "type": "image",
+              "settings": {
+                "icon": "checkmark"
+              }
+            }
+          },
+          "block_order": [
+            "1486502632685-0",
+            "1486502639654",
+            "1486502643820"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-slider": {
+          "type": "featured-slider",
+          "blocks": {
+            "1486503036275-0": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            },
+            "1486503036275-1": {
+              "type": "slide",
+              "settings": {
+                "background_color": "#464f4e",
+                "show_image": true,
+                "slide_button_text": "View"
+              }
+            }
+          },
+          "block_order": [
+            "1486503036275-0",
+            "1486503036275-1"
+          ],
+          "settings": {
+            "use_second_button": true,
+            "text_color": "#ffffff",
+            "cover_title_desktop_position": "center",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "show_view_all": true
+          }
+        },
+        "1486664864970": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "alignment": "top center",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "show_overlay": true,
+            "overlay_color": "#00b490",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0"
+          }
+        },
+        "1486665151632": {
+          "type": "highlight",
+          "settings": {
+            "border_color": "#00b490",
+            "content_alignment": "middle",
+            "image_position": "back",
+            "use_second_button": true
+          }
+        },
+        "1486665428106": {
+          "type": "feature-row",
+          "settings": {
+            "size": "large",
+            "background_color": "",
+            "image_crop": "none",
+            "alignment": "top left",
+            "use_second_button": false,
+            "button_label": "",
+            "button_link": "",
+            "desktop_layout": "right",
+            "mobile_layout": "bottom"
+          }
+        },
+        "1486665657092": {
+          "type": "gallery",
+          "blocks": {
+            "1486665657092-0": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            },
+            "1486665657092-1": {
+              "type": "image",
+              "settings": {
+                "alignment": "center center",
+                "icon": "none",
+                "cta_label": "",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1486665657092-0",
+            "1486665657092-1"
+          ],
+          "settings": {
+            "section_height": "medium",
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.3"
+          }
+        },
+        "1486665735205": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "medium",
+            "alignment": "center center",
+            "title": "",
+            "text_size": "large",
+            "use_second_button": true,
+            "button_label": "about us",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_text": "#ffffff",
+            "overlay_opacity": "0.5"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "hide_variant_images": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "products": "2",
+            "rows": "4",
+            "product_tags_enable": false,
+            "product_sorting_enable": false,
+            "collection_hero_image": false,
+            "collection_hero_image_parallax": false,
+            "show_spacing": false,
+            "show_vendor": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "image_parallax": false,
+            "show_date": true,
+            "show_author": false,
+            "show_share_buttons": true
+          }
+        },
+        "1492804742195": {
+          "type": "custom-content",
+          "blocks": {
+            "1492804742195-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#3a3a3a",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492804742195-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "#00b490",
+            "top_margin": true,
+            "bottom_margin": true
+          }
+        },
+        "1492805123317": {
+          "type": "custom-content",
+          "blocks": {
+            "1492805123317-0": {
+              "type": "text",
+              "settings": {
+                "heading_text": "",
+                "heading_color": "#ffffff",
+                "heading_style": "h3",
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492805123317-0"
+          ],
+          "settings": {
+            "heading_text": "",
+            "heading_color": "#3a3a3a",
+            "background_color": "",
+            "top_margin": true,
+            "bottom_margin": false
+          }
+        }
+      },
+      "content_for_index": [
+        "feature-row",
+        "1492804742195",
+        "1486664864970",
+        "gallery",
+        "1492805123317",
+        "1486665151632",
+        "1486665428106",
+        "1486665657092",
+        "1486665735205",
+        "featured-slider",
+        "featured-collection"
+      ]
+    }
+  }
+}

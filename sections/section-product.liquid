@@ -1,0 +1,478 @@
+{%- assign product = all_products[section.settings.featured_product] -%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+
+{%- for i in (1..1) -%}
+  {%- unless pageUrl contains "?" -%}{% break %}{%- endunless -%}
+  {%- assign pageQuerystring = pageUrl | split:'?' | last -%}
+  {%- assign parts = pageQuerystring | split:'&' -%}
+  {%- for part in parts -%}
+    {%- assign keyAndValue = part | split:'=' -%}
+    {%- if keyAndValue.size > 1 -%}
+		{% if keyAndValue[0] == "variant" %}
+			{% for variant in product.variants %}
+				{% assign strVariantId = variant.id | downcase %}
+			 	{% if strVariantId == keyAndValue[1] %}
+					{% assign current_variant = variant %}
+				{% endif %}
+			{% endfor %}
+
+			{% break %}
+		{% endif %}
+    {%- else -%}
+    {%- endif -%}
+
+  {%- endfor -%}
+{%- endfor -%}
+
+
+<div id="my-cart-navbar" style="display:none;">
+	<div class="nav-cart-left-section">
+		<p>{{ product.title }}</p>
+		<div class="list-inline star">
+          	<a href="#" class="show-review" style="text-decoration: none;">
+              {% include 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false %}
+          	</a>
+          
+          	{% comment %}
+			<a href="#" class="show-review">
+              <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" style="display: inline-block;">{{ product.metafields.stamped.badge }}</span>
+			</a>
+          	{% endcomment %}
+		</div>
+	</div>
+  
+	<div class="nav-cart-right-section">      
+      
+      	<div class="prices-wrapper">
+          	<span class="product__compare-price" {%if product.selected_or_first_available_variant.compare_at_price != blank or product.selected_or_first_available_variant.compare_at_price > 0%} style="display:inline-block;" {%endif%}></span>
+            <span class="product__current-price">{%comment%}{{ current_variant.price | money }}{%endcomment%}</span>
+        </div>
+      
+		<form action="/cart/add" method="post" enctype="multipart/form-data" id="stickyAddToCartForm" class="addtocartform">
+			<select name="id" id="stickyProductSelect" class="product-select">
+              <option value="0">Select</option>
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option data-sku="{{ variant.sku }}" data-compare-price="{{ variant.compare_at_price | money}}" data-price="{{ variant.price | money  }}" value="{{ variant.id }}">{{ variant.title }}</option>
+                {% else %}
+                  <option disabled="disabled"  data-compare-price="{{ variant.compare_at_price | money}}" data-price="{{ variant.price | money }}">{{ variant.title }}</option>
+                {% endif %}
+              {% endfor %}
+			</select>
+          
+          	<div class="hidden">
+			{% if product.available and product.variants.size > 1 %}{% for option in product.options %}{% include 'swatch' with option, p_id: 'sticky', current_variant: current_variant %}{% endfor %}{% endif %}
+            </div>
+          
+			<ul class="list-inline button-container">
+				<li>
+					<button type="submit" name="add" id="stickyAddToCart" disabled class="{%if section.settings.order_button_effect == true %}button-glow{% endif %} q-btn addtocart fixed-nav-atc">{{section.settings.order_button}}</button>			
+				</li>
+			</ul>
+		</form>
+	</div>
+</div>
+
+
+<section id="section-product">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 main-product_image_wrapper">     
+        
+        
+        
+        <div class="col-md-12 carousel slide" id="productCarousel" data-interval="false">
+          <div class="carousel-inner">
+            {%for image in product.images%}
+            <div class="{%if forloop.first%}active {%endif%}item" data-slide-number="{{forloop.index0}}">
+              <img data-src="{{image | img_url: 'master' }}" class="img-responsive lazyload" data-imagezoom="true">
+            </div>
+            {%endfor%}
+          </div>					
+        </div>
+        
+        <div class="col-md-12 product-image-thumbnail">
+          <div class="main-carousel-wrapper">
+            <a class="carousel-control left" data-slide="prev" href="#productCarousel">‹</a> 
+            <a class="carousel-control right" data-slide="next" href="#productCarousel">›</a>
+          </div>
+
+          <ul class="thumbnails">
+            {%for image in product.images%}
+            <li class="span2">
+              <a class="thumbnail {%if forloop.first%} active {%endif%}" id="carousel-selector-{{forloop.index0}}">
+                <img data-src="{{image | img_url: '93x'}}" class="img-responsive lazyload">
+              </a>
+            </li>
+            {% endfor %}
+            <li class="span2 watch-video"><a data-fancybox="gallery" href="{{product.type}}" class="thumbnail play-btn clr-black" data-width="640" data-height="360" id="product-video-fancybox"><img src="{{ 'play-button-product.png' | asset_url }}" class="lazyload"></a></li>
+            <li class="span2 watch-video"><a data-fancybox="gallery" href="https://vimeo.com/340917285" class="thumbnail play-btn clr-black" data-width="640" data-height="360" id="product-lifestyle-video-fancybox"><img src="{{ 'play-button-lifestyle.png' | asset_url }}" class="lazyload"></a></li>
+          </ul>
+        </div>
+        <a data-fancybox="gallery" href="{{product.type}}" class="mobile play-btn clr-black" data-width="640" data-height="360"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Product video</a><br>
+        <a data-fancybox="gallery" href="https://vimeo.com/340917285" class="mobile play-btn clr-black lifestyle" data-width="640" data-height="360"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Lifestyle video</a>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="product-details">
+          <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+          <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}">
+          <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+          <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+          {% assign producttitle = product.title | replace_first: ' ', '<br>' %}
+          <h1 itemprop="name" class="product-title">{{ producttitle }}</h1>
+          
+          <div class="list-inline star">
+            <a href="#" class="show-review" style="text-decoration: none;">
+              {% include 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false %}
+              
+              {% comment %} <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span> {% endcomment %}
+              <!-- Stamped.io review badge -->
+              {% comment %}
+              <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" style="display: inline-block;">{{ product.metafields.stamped.badge }}</span>
+              {% endcomment %}
+              <!-- end Stamped.io review badge -->
+            </a>
+            <script>
+              $(".show-review").on('click', function(e){								
+                e.preventDefault(); 
+                var t_p = $(".tab-content").offset().top;
+                $('body, html').scrollTop(t_p);
+                $("#section-blog .nav li.active").removeClass('active');
+                $(".all-review-content").parent('li').addClass('active');
+                $(".tab-pane.active").removeClass('in active');
+                $("#menu2").addClass('in active');
+
+              })
+            </script>
+          </div>
+
+          <span class="product__compare-price" {%if product.selected_or_first_available_variant.compare_at_price != blank or product.selected_or_first_available_variant.compare_at_price > 0%} style="display:inline-block;" {%endif%}>
+          	{%comment%}{{ current_variant.compare_at_price | money }}{%endcomment%}
+          </span>
+          <span class="product__current-price">{%comment%}{{ current_variant.price | money }}{%endcomment%}</span>
+
+			<!--
+          <div class="text-center label-select-size">
+            <span>Please Select Size</span>
+          </div>
+			-->
+          
+          <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="addtocartform">
+            
+            <select name="id" id="productSelect" class="product-select">
+              <option value="0">Please select size</option>
+              {% for variant in product.variants %}
+              {% if variant.available %}
+              <option data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+              {% else %}
+              <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+              {% endif %}
+              {% endfor %}
+            </select>
+            
+            <div class="hidden">
+            {% if product.available and product.variants.size > 1 %}{% for option in product.options %}{% include 'swatch' with option, p_id: '', current_variant: current_variant %}{% endfor %}{% endif %}
+            </div>
+
+
+            <ul class="list-inline button-container">
+              <li class="hidden">
+                <div class="extra qty-group q-btn">
+                  <a href="javascript:void(0)" class="dec button"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                  <input type="text" id="quantity" class="number" name="quantity" value="1">
+                  <a href="javascript:void(0)" class="inc button"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                </div>
+              </li>
+              
+              
+              <li>                
+                
+                <button type="submit" name="add" id="AddToCart" disabled class="{%if section.settings.order_button_effect == true %}button-glow{% endif %}  addtocart">{{section.settings.order_button}}</button>
+                
+                <klarna-placement data-id="3e4c698e-10b4-444d-9ce0-c015011387f0" data-purchase_amount="8999" data-preloaded="false" style="display: inline-block; position: relative; overflow: hidden; width: 100%; height: 100%; max-width: 350px; max-height: 70px;">
+                </klarna-placement>                
+                
+                {% comment %} Removed by Robert S at Shopify Theme Support February 27, 2020 
+                <a class="btn_amazon" href="https://www.amazon.com/Radical-Pan-Non-Stick-Certified-Dishwasher/dp/B07RV4ZN6M/ref=sr_1_2?keywords=radical+pan&qid=1578069248&sr=8-2">
+                  <img src="{{'Amazon-Prime-Logo.png'|asset_url}}">
+                </a>
+                {% endcomment %}
+                
+                <span class="wranty-badge-wrapper">
+                  <a href="https://docs.google.com/gview?url={{section.settings.lifetime_warranty_url}}&embedded=true" class="wranty-badge">
+                    <b>LIFETIME</b> WARRANTY
+                  </a>
+                </span>	
+                
+                
+                
+                <!--
+                <p class="preorder-message" style="text-align: center;font-weight:bold;">Deliveries Start August 1st</p>
+-->
+                
+              </li>
+            </ul>
+          </form>
+          
+          <div class="hulkapps-volumes"></div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row pd-t">
+      <div class="product-description text-center desktop" id="product-description" itemprop="description">{{ product.description }}</div>
+      <div id="shopify-product-reviews" data-id="{{product.id}}" style="display:none;">{{ product.metafields.spr.reviews }}</div>
+
+
+      <div class="skillet mobile text-center">
+        <h1><span id="nofield" class="skillet-title">8.5-Inch</span> Skillet Details</h1>
+        <div class="owl-carousel owl-theme" id="skillet-slider">
+          <div class="item">
+            <div class="health-box">
+              <div class="health-box-inner">  
+                <h3 class="theme-colored">DIMENSIONS</h3>
+                <p class="ui2-change" id="ui2-14039871193163">
+                  8.5” Top Diameter<br>
+                  2.5” Wall Height + 1" Lip<br>
+                  7.5-Inch Handle Length<br>
+                  3.15 lb<br>
+                </p>
+
+                <p class="ui2-change hidden" id="ui2-14093163888715">
+                  10” Top Diameter<br>
+                  3.5” Wall Height + 1.5" Lip<br>
+                  8.5-Inch Handle Length<br>
+                  4.25 lb<br>
+                </p>
+
+                <p class="ui2-change hidden" id="ui2-14093163921483">
+                  12” Top Diameter<br>
+                  3.5” Wall Height + 1.5" Lip<br>
+                  8.5-Inch Handle Length<br>
+                  5 lb<br>
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="item">
+            <div class="health-box">
+              <div class="health-box-inner">  
+                <h3 class="theme-colored">USES</h3>
+                <p>
+                  Gas<br>
+                  Electric<br>
+                  Induction<br>
+                  Oven & Dishwasher safe<br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="health-box">
+              <div class="health-box-inner">  
+                <h3 class="theme-colored">FEATURES BOOKLET</h3>
+                <div class="health-box-body">
+                  <div id="publitas-embed-cikc7xxv7y3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="health-box">
+              <div class="health-box-inner">  
+                <h3 class="theme-colored">SUPPORT</h3>
+                <p>
+                  Lifetime Warranty<br>
+                  Delivery Worldwide<br>
+                  Live Support<br>
+                  Care Guide Included<br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <script data-cfasync="false" data-height="320" data-publication="https://view.publitas.com/radusa/radusa-welcome-booklet-ed4_8vjldjb9/" data-publication-aspect-ratio="2.8210838901262063" data-responsive="true" data-width="undefined" data-wrapperid="publitas-embed-cikc7xxv7y3" publitas-embed="" src="https://view.publitas.com/embed.js" type="text/javascript"></script>
+    </div>
+  </div>
+</section>
+
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script type='text/javascript' src="{{ 'imagezoom.js' | asset_url }}"></script>
+
+
+<script>    
+  function productImagesInit(){
+    var imageDefer = document.getElementsByTagName('img');
+	for (var i=0; i<imageDefer.length; i++) {
+		if(imageDefer[i].getAttribute('pre-img-src')) {
+			imageDefer[i].setAttribute('src',imageDefer[i].getAttribute('pre-img-src'));
+		} 
+    } 
+  }
+  
+
+  var hulkappVolumesAdded = false;
+  var hulkTimer;
+  jQuery(document).ready(function($) {   
+    
+    $("#stickyProductSelect").val("0");
+    $("#productSelect").val("0");
+    hulkTimer = setInterval(checkHulkAppVolumes, 1000);
+  });
+  
+  function checkHulkAppVolumes(){
+    if ( $(".hulkapps-volumes .hulkapps-table thead").length > 0 ){
+      clearInterval(hulkTimer);
+      
+      $(".hulkapps-volumes .hulkapps-table thead tr").append($("<th>Code</th>"));
+      $(".hulkapps-volumes .hulkapps-table tbody tr:nth-child(1)").append( $("<td>\"20OFF\"</td>") );
+      $(".hulkapps-volumes .hulkapps-table tbody tr:nth-child(2)").append( $("<td>\"30OFF\"</td>") );
+    }
+  }
+  
+</script>
+
+
+{% schema %}
+  {
+    "name": "Product",
+    "settings": [
+		{
+          "type": "product",
+          "id": "featured_product",
+          "label": {
+            "en": "Product"
+		  }
+        },
+        {
+          "type": "text",
+          "id": "order_button",
+          "label": "Order button text"
+        },
+        {
+          "type": "checkbox",
+          "id": "order_button_effect",
+          "label": "Order Button Effect"
+        },
+        {
+          "type": "url",
+          "id": "lifetime_warranty_url",
+          "label": "Lifetime Warranty Url"
+        }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+@-webkit-keyframes glowing2 {
+  0% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+  40% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  60% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  100% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+}
+
+@-moz-keyframes glowing2 {
+  0% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+  40% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  60% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  100% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+}
+
+@-o-keyframes glowing2 {
+  0% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+  40% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  60% { -webkit-box-shadow: 0 0 20px #8A2433; }
+  100% { -webkit-box-shadow: 0 0 -10px #8A2433; }
+}
+
+@keyframes glowing2 {
+  0% { box-shadow: 0 0 -10px #8A2433; }
+  40% { box-shadow: 0 0 20px #8A2433; }
+  60% { box-shadow: 0 0 20px #8A2433; }
+  100% { box-shadow: 0 0 -10px #8A2433; }
+}
+
+
+.button-glow {
+	animation: glowing2 1500ms infinite;
+}
+
+#skillet-slider .owl-dots{
+	text-align: center;
+	margin-top: 0px;
+}
+
+#skillet-slider .owl-dots .owl-dot{
+    padding: 0px 5px !important;
+}
+  
+#skillet-slider .owl-dots .owl-dot span{
+    background: #ddd;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#skillet-slider .owl-dots .owl-dot.active span{
+    background: #8A2433;
+    border:1px solid #337ab7;
+}
+  
+  
+  
+#skillet-slider .health-box{
+    margin-top: 20px;
+}
+  
+#skillet-slider .health-box .health-box-inner p{
+    padding-top: 0px;
+}
+  
+#skillet-slider .health-box .health-box-body{
+    padding: 0px 90px;    
+}
+
+@media only screen and (max-width: 600px){
+	#skillet-slider .health-box .health-box-body{
+    	padding: 0px 30px;    
+  	}
+}
+  
+@media only screen and (max-width: 600px){
+    #skillet-slider .health-box .health-box-body{
+    	padding: 0px 0px;    
+  	}
+}
+  
+@media only screen and (max-width: 420px){
+  	#skillet-slider .health-box{
+    	height: 200px;
+  	}
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
